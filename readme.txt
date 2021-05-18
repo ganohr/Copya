@@ -1,11 +1,22 @@
-# Copya! - Copyable area
+=== Copya! - Copyable area ===
+Contributors: Ganohr
+Tags: Copyable, form, text
+Donate link: http://amzn.asia/gw9HHbg
+Requires at least: 4.0
+Tested up to: 5.7.2
+Requires PHP: 5.0
+Stable tag: trunk
+License: GPLv2
+License URI: http://www.opensource.jp/gpl/gpl.ja.html
 
-## What's this?
-WordPress Plugin of append Copyable area with text-click or button-click!
+WordPress Plugin of append Copy-Able area with text-click or button-click!
+
+== Description ==
+WordPress Plugin of append Copy-Able area with text-click or button-click!
 
 クリックやボタンクリックでコピー可能な領域を追加するワードプレスのプラグインです!
 
-## Usage
+== Usage ==
 ```
 [copya]Copy able text[/copya]
 ```
@@ -21,7 +32,7 @@ WordPress Plugin of append Copyable area with text-click or button-click!
 * ```readonly="yes"``` change to text area is not edit-able / テキスト領域を編集不可能にする
 * ```text="コピー可能なテキスト"``` set copying text / コピーするテキストを指定する
 
-### other options
+=== other options ===
 
 * ```cssprefix="copya-"``` change CSS prefix to others / CSSクラスの接頭辞を指定する
 * ```id="auto / or set manual"``` set id manualy(direct set) or "auto" / IDの指定を自動（"auto"）にするか指定する
