@@ -28,3 +28,13 @@ WordPress Plugin of append Copyable area with text-click or button-click!
 * ```textclick="yes"``` set copy-able when text click / テキスト領域をクリックしてコピー可能にする
 * ```newline_escape="yes"``` change newline code or &gt;br&lt; to escaped / 改行コードや「&gt;br&lt;」タグをエスケープする
 * ```alert_escape="yes"``` change newline code to escaping for alert message / 警告文の改行コードをエスケープする
+
+## Install
+
+* download "release/copya-0.0.1.zip" and zip upload to your site plugin page.
+* 「release/copya-0.0.1.zip」をダウンロードし、あなたのサイトのプラグインページからアップロードしてください
+
+## Build
+
+* run "build.bat", then create zip file. But it can runnable only win10(need tar.exe).
+* 「build.bat」を実行するとZIPファイルが作られます。なお、これはWin10のみで動作します（tar.exeが必要です）
