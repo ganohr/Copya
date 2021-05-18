@@ -1,13 +1,18 @@
 # What's this?
 WordPress Plugin of append Copy-Able area with text-click or button-click!
+
 クリックやボタンクリックでコピー可能な領域を追加するワードプレスのプラグインです!
 
 # Usage
+```
 [copya]Copy able text[/copya]
+```
 * Append copay-able area, when click this area or below button, then copy to clipboard the text "Copy able text".
 * コピー可能な領域を追加し、この領域や後ろに付くボタンをクリックすると、クリップボードに「Copy able text」がコピーされます。
 
+```
 [copya label="コピー可能" button="コピー" alert="コピーしました!" textclick="yes" readonly="yes" text="コピー可能なテキスト"/]
+```
 * ```label="コピー可能"``` change label / ラベルを変更する
 * ```button="コピー"```  change button text / ボタンのテキストを変更する
 * ```alert="コピーしました!"``` change alert text / コピーした際に表示される警告文を変更する
