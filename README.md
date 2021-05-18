@@ -31,10 +31,19 @@ WordPress Plugin of append Copyable area with text-click or button-click!
 
 ## Install
 
-* download "release/copya-0.0.1.zip" and zip upload to your site plugin page.
-* 「release/copya-0.0.1.zip」をダウンロードし、あなたのサイトのプラグインページからアップロードしてください
+* download "[release/copya-0.0.1.zip](https://github.com/ganohr/Copya/blob/main/release/copya-0.0.1.zip)" and zip upload to your site plugin page.
+* 「[release/copya-0.0.1.zip](https://github.com/ganohr/Copya/blob/main/release/copya-0.0.1.zip)」をダウンロードし、あなたのサイトのプラグインページからアップロードしてください
 
 ## Build
 
-* run "build.bat", then create zip file. But it can runnable only win10(need tar.exe).
-* 「build.bat」を実行するとZIPファイルが作られます。なお、これはWin10のみで動作します（tar.exeが必要です）
+* run "[build.bat](https://github.com/ganohr/Copya/blob/main/build.bat)", then create zip file. But it can runnable only win10(need tar.exe).
+* 「[build.bat](https://github.com/ganohr/Copya/blob/main/build.bat)」を実行するとZIPファイルが作られます。なお、これはWin10のみで動作します（tar.exeが必要です）
+
+## Support Site
+
+https://ganohr.net/blog/copya
+
+
+## Please donate.
+
+http://amzn.asia/gw9HHbg
