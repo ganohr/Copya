@@ -39,6 +39,24 @@ if ( !function_exists('gnr_copya_func') ) {
     ) {
   		return gnr_replace_amp_to_normal("[amp_to_normal]");
   	}
+
+    // プラグイン情報を定義
+    $handle = "ganohrs-copya";
+    $src = plugins_url('style.css', __FILE__);
+    $ver = '0.0.1';
+
+    // スタイルシートをエンキューする
+    if( !wp_style_is( $handle ) ) {
+      wp_enqueue_style(
+        $handle,
+        $src,
+        false,
+        $ver,
+        "all"
+      );
+    }
+
+    // オプションを展開
   	extract(
   		shortcode_atts(
   			array(
@@ -55,10 +73,12 @@ if ( !function_exists('gnr_copya_func') ) {
   			), $atts
   		)
   	);
+
   	// 基本はコンテンツの内容を優先するが、空なら「text」指定を取得する
   	if(!empty($content)) {
   		$text = $content;
   	}
+
   	// “”,‘’に勝手に修正されるのを是正
   	$text = str_replace(
   		array("“", "”", "″", '"', "&#8220;", "&#8221;", "&#8243;", "&quot;"),
@@ -70,6 +90,7 @@ if ( !function_exists('gnr_copya_func') ) {
   		"'",
   		$text
   	);
+
     // テキストに含まれる改行をエスケープする
   	$text = strip_tags(
   		$newline_escape === 'yes' ? (
@@ -82,6 +103,7 @@ if ( !function_exists('gnr_copya_func') ) {
   			$text
   		)
   	);
+
   	// alertの内容が空以外なら、アラートを出す
   	if(!empty($alert)) {
   		$alert = strip_tags(
@@ -97,28 +119,34 @@ if ( !function_exists('gnr_copya_func') ) {
   		);
   		$alert = "alert('$alert');";
   	}
+
   	// 「id」未指定や「auto」が指定されている場合、IDはテキストのハッシュ値を採用
   	if($id === 'auto' || empty($id)) {
   		$id = bin2hex(hash('crc32b', $text));
   	}
+
   	// 「id」を元に、onclickを構築
   	$js_onclick = " onclick=\"document.getElementById('$id').select();document.execCommand('copy');$alert\"";
+
   	// テキストクリックイベントが必要（'yes'）ならクリックイベントを登録する
   	if($textclick === 'yes') {
   		$textclick = $js_onclick;
   	}
+
   	// ボタン用のタグを生成する。なおbuttonの内容が空文字ならボタンを無くす
   	if(empty($button)) {
   		$button = "";
   	} else {
   		$button = "<input type='button'$js_onclick value='$button' class='${cssprefix}button'/>";
   	}
+
   	// 「readonly」が「yes」以外なら読み込み専用にしない
   	if($readonly !== 'yes') {
   		$readonly = '';
   	} else {
   		$readonly = ' readonly';
   	}
+
   	// コピーする内容に改行が入っているならtextarea、入ってないならinput
   	if(strpos($text, "\r") !== false
       || strpos($text, "\n") !== false
@@ -127,17 +155,18 @@ if ( !function_exists('gnr_copya_func') ) {
   <br class="${cssprefix}br1" id="br1-$id"><textarea id="$id"$textclick class="${cssprefix}text"$readonly>
   $text
   </textarea><br class="${cssprefix}br2" id="br2-$id">
-  EOF;
+EOF;
   	} else {
   		$text = str_replace('"', '&quot;',$text);
   		$tag = <<<EOF
   <input id="$id"$textclick type="text" value="$text" class="${cssprefix}text"$readonly/>
-  EOF;
+EOF;
   	}
+
   	// コード全体を返却する
   	return <<<EOF
   <div class="${cssprefix}outer" id="outer$id"><label class="${cssprefix}label" id="label$id">$label</label>$tag$button</div>
-  EOF;
+EOF;
   }
   add_shortcode('copya', 'gnr_copya_func', 9999);
 }

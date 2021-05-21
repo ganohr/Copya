@@ -13,6 +13,7 @@ mkdir %outpath%\
 
 rem copy *.md %outpath%\
 copy *.txt %outpath%\
+copy *.css %outpath%\
 copy *.php %outpath%\
 
 cd %outpath%

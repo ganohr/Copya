@@ -1,0 +1,7 @@
+.copya-outer {
+    margin: 1em auto;
+}
+.copya-outer textarea {
+	width: 100%;
+	min-height: 5em;
+}
