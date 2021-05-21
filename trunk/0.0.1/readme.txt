@@ -39,3 +39,5 @@ WordPress Plugin of append Copy-Able area with text-click or button-click!
 * ```textclick="yes"``` set copy-able when text click / テキスト領域をクリックしてコピー可能にする
 * ```newline_escape="yes"``` change newline code or &gt;br&lt; to escaped / 改行コードや「&gt;br&lt;」タグをエスケープする
 * ```alert_escape="yes"``` change newline code to escaping for alert message / 警告文の改行コードをエスケープする
+
+==
