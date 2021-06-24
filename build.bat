@@ -18,11 +18,16 @@ copy *.php %outpath%\
 
 cd %outpath%
 
-set "zipfile=..\..\release\copya-%version%.zip"
+set "zipfile_ver=..\..\release\copya-%version%.zip"
+del %zipfile_ver%
+
+tar -a -c -f %zipfile_ver% *
+
+set "zipfile=..\..\release\copya.zip"
 del %zipfile%
 
-tar -a -c -f %zipfile% *
+copy %zipfile_ver% %zipfile%
 
 endlocal
-pause
+rem pause
 echo on

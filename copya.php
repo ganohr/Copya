@@ -3,7 +3,7 @@
 Plugin Name: Copya! - Copyable area
 Plugin URI: https://ganohr.net/blog/copya/
 Description: WordPress Plugin of append Copyable area with text-click or button-click!
-Version: 0.0.1
+Version: 0.0.2
 Author: Ganohr
 Author URI: https://ganohr.net/
 License: GPL2
